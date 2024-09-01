@@ -8,3 +8,9 @@ map("n", ";", ":", { desc = "CMD enter command mode" })
 map("i", "jk", "<ESC>")
 
 -- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
+
+
+-- Custom
+
+map("n", "<leader>pv", "<cmd> NvimTreeToggle <cr>", { desc = "Toggle NvimTree"})
+
