@@ -4,10 +4,36 @@ local on_init = require("nvchad.configs.lspconfig").on_init
 local capabilities = require("nvchad.configs.lspconfig").capabilities
 
 local lspconfig = require "lspconfig"
-local servers = { "templ", "gopls", "tailwindcss", "pylsp", "ocamllsp" } -- ocaml
+local servers = { "templ", "gopls", "tailwindcss", "pylsp", "ocamllsp", "nim_langserver" } -- ocaml
 
 local util = require "lspconfig/util"
 local nvlsp = require "nvchad.configs.lspconfig"
+
+-- local rt = require("rust-tools")
+--
+-- rt.setup({
+--   server = {
+--     on_attach = function(_, bufnr)
+--       -- Hover actions
+--       vim.keymap.set("n", "<C-space>", rt.hover_actions.hover_actions, { buffer = bufnr })
+--       -- Code action groups
+--       vim.keymap.set("n", "<Leader>a", rt.code_action_group.code_action_group, { buffer = bufnr })
+--     end,
+--   },
+-- })
+
+lspconfig.solidity_ls.setup{
+    cmd = { "vscode-solidity-server", "--stdio" },
+    filetypes = { "solidity" },
+    root_dir = lspconfig.util.root_pattern("hardhat.config.js", "foundry.toml", ".git"),
+    settings = {
+        solidity = {
+            compileUsingRemoteVersion = 'latest',
+            defaultCompiler = 'remote',
+            enabledAsYouTypeCompilationErrorCheck = true,
+        },
+    }
+}
 
 -- setup formaters
 
@@ -22,6 +48,16 @@ for _, lsp in ipairs(servers) do
   }
 end
 
+-- lspconfig.solidity.setup {
+--   on_attach = on_attach,
+--   capabilities = capabilities,
+--   filetypes = { "solidity" },
+--   root_dir = util.root_pattern(".git")
+-- }
+
+
+-- Old Rust config
+
 lspconfig.rust_analyzer.setup {
   on_attach = on_attach,
   capabilities = capabilities,
@@ -35,13 +71,12 @@ lspconfig.rust_analyzer.setup {
     },
   },
 }
---       },
---     },
---   },
--- }
+
+
 
 -- typescript
-lspconfig.tsserver.setup {
+
+lspconfig.ts_ls.setup {
   on_attach = on_attach,
   on_init = on_init,
   capabilities = capabilities,
