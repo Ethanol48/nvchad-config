@@ -67,6 +67,10 @@ return {
         "html",
         "css",
         "svelte",
+        "markdown",
+        "markdown_inline",
+        "typescript",
+        "c"
       },
     },
   },
