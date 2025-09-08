@@ -4,7 +4,7 @@ local on_init = require("nvchad.configs.lspconfig").on_init
 local capabilities = require("nvchad.configs.lspconfig").capabilities
 
 local lspconfig = require "lspconfig"
-local servers = { "templ", "gopls", "tailwindcss", "pylsp", "ocamllsp", "nim_langserver" } -- ocaml
+local servers = { "templ", "gopls", "tailwindcss", "pylsp", "ocamllsp", "nim_langserver", "clangd" } -- ocaml
 
 local util = require "lspconfig/util"
 local nvlsp = require "nvchad.configs.lspconfig"
