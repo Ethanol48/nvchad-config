@@ -1,10 +1,10 @@
 return {
   renderer = {
-    root_folder_label = ":~:s?$?/..?"
+    root_folder_label = ":~:s?$?/..?",
   },
 
   git = {
-    enable = true
-  }
+    enable = true,
+    ignore = false,
+  },
 }
-
