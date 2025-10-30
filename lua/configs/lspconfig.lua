@@ -3,12 +3,13 @@ local on_attach = require("nvchad.configs.lspconfig").on_attach
 local on_init = require("nvchad.configs.lspconfig").on_init
 local capabilities = require("nvchad.configs.lspconfig").capabilities
 
-local servers = { "templ", "gopls", "tailwindcss", "pylsp", "clangd", "ts_ls" } -- ocaml
+local servers = { "templ", "gopls", "tailwindcss", "pylsp", "ts_ls", "clangd" } -- ocaml
 
 local util = require "lspconfig/util"
 
--- Solidity
+-- Custom configs
 
+-- Solidity
 vim.lsp.config("solidity_ls", {
   cmd = { "vscode-solidity-server", "--stdio" },
   filetypes = { "solidity" },
@@ -22,8 +23,7 @@ vim.lsp.config("solidity_ls", {
   },
 })
 
--- Custom configs
-
+-- Rust
 vim.lsp.config("rust_analyzer", {
   on_attach = on_attach,
   capabilities = capabilities,
@@ -38,7 +38,6 @@ vim.lsp.config("rust_analyzer", {
   },
 })
 
--- Set up LSP servers with the same config
 local servers_web = { "html", "cssls" }
 vim.lsp.enable(servers)
 
