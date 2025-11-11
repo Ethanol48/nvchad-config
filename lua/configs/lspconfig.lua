@@ -4,10 +4,9 @@ local on_init = require("nvchad.configs.lspconfig").on_init
 local capabilities = require("nvchad.configs.lspconfig").capabilities
 
 local servers = { "templ", "gopls", "tailwindcss", "pylsp", "ts_ls", "clangd" } -- ocaml
+vim.lsp.enable(servers)
 
 local util = require "lspconfig/util"
-
--- Custom configs
 
 -- Solidity
 vim.lsp.config("solidity_ls", {
@@ -39,7 +38,6 @@ vim.lsp.config("rust_analyzer", {
 })
 
 local servers_web = { "html", "cssls" }
-vim.lsp.enable(servers)
 
 for _, lsp in pairs(servers_web) do
   vim.lsp.config(lsp, {
