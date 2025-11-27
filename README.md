@@ -8,8 +8,7 @@ I derived it from Nvchad for easier configuration
 - Install [Nvchad](https://nvchad.com/docs/quickstart/install) and its prequisites
 
 
-<summary><h3>Install the config</h3></summary>
-
+### Install the config
 
 <details>
 <summary><h3>Linux / MacOs</h3></summary>
@@ -19,7 +18,7 @@ I derived it from Nvchad for easier configuration
 git clone https://github.com/Ethanol48/nvchad-config ~/.config/nvim && nvim
 ```
 
-  </details>
+</details>
 
 <details>
 <summary><h3>Windows<h3></summary>
@@ -37,12 +36,12 @@ git clone https://github.com/Ethanol48/nvchad-config $ENV:USERPROFILE\AppData\Lo
 
 If the path doesn't work try these paths respectively:
 
-# For CMD : %LOCALAPPDATA%\nvim
+For CMD : %LOCALAPPDATA%\nvim
 ```
 C:\Users\%USERNAME%\AppData\Local\nvim 
 ```
 
-# For PowerShell : $ENV:LocalAppData\nvim 
+For PowerShell : $ENV:LocalAppData\nvim 
 ```
 C:\Users\$ENV:USERNAME\AppData\Local\nvim 
 ```
