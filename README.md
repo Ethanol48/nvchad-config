@@ -1,4 +1,4 @@
-### What is this repository ?
+### <ins>What is this repository</ins> ?
 
 This is the repository where a I save my personal configuration of neovim
 I derived it from Nvchad for easier configuration 
@@ -12,23 +12,24 @@ To customize it further consult the [Nvchad docs](https://nvchad.com/docs/)
 and if you find any issues or you want to implement something niche, I recommend
 the Nvchad discussions on their [github](https://github.com/NvChad/NvChad/discussions)
 
+---
 
-### Pre-requisites
+### <ins>Pre-requisites</ins>
 
-- Install [Nvchad](https://nvchad.com/docs/quickstart/install) and its prequisites
+#### Install [Nvchad](https://nvchad.com/docs/quickstart/install) and its prequisites
 
-Optional:
 
-For some LSPs you would need to have package managers to install the different dependencies
+(Optional) For some LSPs you would need to have package managers to install the different dependencies
 
 - golang installed (for gopls)
 - npm 
 - etc ... 
+---
 
-### Download the config
+### <ins>Download the config</ins>
 
 <details>
-<summary><h3>Linux / MacOs</h3></summary>
+<summary><h3>Linux 🐧 / MacOS 🍎</h3></summary>
 
 
 ```bash
@@ -38,7 +39,7 @@ git clone https://github.com/Ethanol48/nvchad-config ~/.config/nvim && nvim
 </details>
 
 <details>
-<summary><h3>Windows<h3></summary>
+<summary><h3>Windows 🪟<h3></summary>
 
 
 #### Command Prompt(CMD)
@@ -64,8 +65,9 @@ C:\Users\$ENV:USERNAME\AppData\Local\nvim
 ```
 </details>
 
+---
 
-### Set-up
+### <ins>Set-up</ins>
 
 After installing the config and launching nvim for the first time Lazy would have installed most of the dependencies but LSPs and parsers are not intalled yet.
 
