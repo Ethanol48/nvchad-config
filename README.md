@@ -8,11 +8,11 @@ I derived it from Nvchad for easier configuration
 - Install [Nvchad](https://nvchad.com/docs/quickstart/install) and its prequisites
 
 
-<summary><h3>Install the config</h3</summary>
+<summary><h3>Install the config</h3></summary>
 
 
 <details>
-<summary><h3>Linux / MacOs</h3</summary>
+<summary><h3>Linux / MacOs</h3></summary>
 
 
 ```bash
