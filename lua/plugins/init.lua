@@ -18,25 +18,7 @@ return {
 
   {
     "williamboman/mason.nvim",
-    opts = {
-      ensure_installed = {
-        "lua-language-server",
-        "stylua",
-        "html-lsp",
-        "css-lsp",
-        "prettier",
-        "rust-analyzer",
-        "gopls",
-        "clangd",
-        "nimlangserver",
-        "python-lsp-server",
-        "svelte-language-server",
-        "tailwindcss-language-server",
-        "templ",
-        "typescript-language-server",
-        "vscode-solidity-server",
-      },
-    },
+    opts = require "configs.mason",
   },
 
   "nvim-lua/plenary.nvim",
@@ -59,20 +41,7 @@ return {
 
   {
     "nvim-treesitter/nvim-treesitter",
-    opts = {
-      ensure_installed = {
-        "vim",
-        "lua",
-        "vimdoc",
-        "html",
-        "css",
-        "svelte",
-        "markdown",
-        "markdown_inline",
-        "typescript",
-        "c"
-      },
-    },
+    opts = require "configs.tree-sitter",
   },
   {
     "nvim-tree/nvim-tree.lua",
