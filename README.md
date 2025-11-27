@@ -8,17 +8,19 @@ I derived it from Nvchad for easier configuration
 - Install [Nvchad](https://nvchad.com/docs/quickstart/install) and its prequisites
 
 
-### Install the config
-
 <details>
-  <summary><h3>Linux / MacOs</h3</summary>
+  <summary><h3>Install the config</h3</summary>
+
+
+  <details>
+    <summary><h3>Linux / MacOs</h3</summary>
 
 
 ```bash
 git clone https://github.com/Ethanol48/nvchad-config ~/.config/nvim && nvim
 ```
 
-</details>
+  </details>
 
 <details>
   <summary><h3>Windows<h3></summary>
@@ -45,4 +47,6 @@ C:\Users\%USERNAME%\AppData\Local\nvim
 ```
 C:\Users\$ENV:USERNAME\AppData\Local\nvim 
 ```
+</details>
+
 </details>
