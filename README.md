@@ -1,15 +1,18 @@
+### What is this repository ?
+
+This is the repository where a I save my personal configuration of neovim
+I derived it from Nvchad for easier configuration 
+
 ### Pre-requisites
 
-- install [Nvchad](https://nvchad.com/docs/quickstart/install) and its prequisites
+- Install [Nvchad](https://nvchad.com/docs/quickstart/install) and its prequisites
 
 
-## How to install
-
+### Install the config
 
 <details>
-  <summary>Linux / MacOs</summary>
+  <summary><h3>Linux / MacOs</h3</summary>
 
-### Linux / MacOs
 
 ```bash
 git clone https://github.com/Ethanol48/nvchad-config ~/.config/nvim && nvim
@@ -18,9 +21,8 @@ git clone https://github.com/Ethanol48/nvchad-config ~/.config/nvim && nvim
 </details>
 
 <details>
-  <summary>Windows</summary>
+  <summary><h3>Windows<h3></summary>
 
-### Windows
 
 #### Command Prompt(CMD)
 ```
