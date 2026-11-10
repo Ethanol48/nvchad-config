@@ -3,10 +3,14 @@ local on_attach = require("nvchad.configs.lspconfig").on_attach
 local on_init = require("nvchad.configs.lspconfig").on_init
 local capabilities = require("nvchad.configs.lspconfig").capabilities
 
-local servers = { "templ", "gopls", "tailwindcss", "pylsp", "ts_ls", "clangd" } -- ocaml
-vim.lsp.enable(servers)
-
 local util = require "lspconfig/util"
+
+vim.lsp.config("clangd", {
+  cmd = { "clangd" },
+  init_options = {
+    fallbackFlags = { "-xc", "-std=c99" },
+  },
+})
 
 -- Solidity
 vim.lsp.config("solidity_ls", {
@@ -18,21 +22,6 @@ vim.lsp.config("solidity_ls", {
       compileUsingRemoteVersion = "latest",
       defaultCompiler = "remote",
       enabledAsYouTypeCompilationErrorCheck = true,
-    },
-  },
-})
-
--- Rust
-vim.lsp.config("rust_analyzer", {
-  on_attach = on_attach,
-  capabilities = capabilities,
-  filetypes = { "rust" },
-  root_dir = util.root_pattern "Cargo.toml",
-  settings = {
-    ["rust-analyzer"] = {
-      cargo = {
-        allFeatures = true,
-      },
     },
   },
 })
@@ -64,3 +53,6 @@ vim.lsp.config("svelte", {
     })
   end,
 })
+
+local servers = { "templ", "gopls", "tailwindcss", "pylsp", "ts_ls", "clangd", "svelte" } -- ocaml
+vim.lsp.enable(servers)

@@ -3,6 +3,7 @@ local TreeSitter = {
     "vim",
     "lua",
     "vimdoc",
+    "lua",
     "html",
     "css",
     "svelte",
